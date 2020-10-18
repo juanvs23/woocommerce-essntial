@@ -152,6 +152,21 @@ function ztgroup_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'ztgroup_theme_scripts' );
 
 /**
+* remover style
+*/
+//woocommerce jquery-blockui
+add_action( 'wp_print_styles', 'deregister_my_styles', 100 );
+ 
+function deregister_my_styles() {
+	wp_deregister_style( 'jquery-blockui' );
+}
+function vpsb_custom_jquery() {
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', ("https://www.vpsbasics.com/wp-content/litespeed/localres/code.jquery.com/jquery-3.4.1.min.js"), array(), _S_VERSION,true);
+    wp_enqueue_script('jquery');
+}
+add_action('wp_enqueue_scripts', 'vpsb_custom_jquery');
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
