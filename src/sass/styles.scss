@@ -1,3 +1,14 @@
-body{
-    background-color: red;
-}
+//base
+@import "~bootstrap/scss/bootstrap-reboot.scss";
+@import "~bootstrap/scss/bootstrap-grid.scss";
+//variables
+@import "./global/variables";
+//fonts
+@import "./global/fonts";
+//globals
+
+//components
+@import "./components/header";
+@import "./components/footer";
+//pages
+@import "./page/home"

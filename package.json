@@ -22,6 +22,11 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "@splidejs/splide": "^2.4.14"
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@splidejs/splide": "^2.4.14",
+    "bootstrap": "^4.5.3",
+    "glightbox": "^3.0.5",
+    "slideout": "^1.0.1",
+    "swiper": "^6.3.3"
   }
 }

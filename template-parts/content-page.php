@@ -16,7 +16,7 @@
 
 	<?php ztgroup_theme_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="container">
 		<?php
 		the_content();
 
