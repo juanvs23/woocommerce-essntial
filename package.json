@@ -16,6 +16,7 @@
   "devDependencies": {
     "cross-env": "^7.0.2",
     "laravel-mix": "^5.0.7",
+    "postcss-assets": "^5.0.0",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.27.0",
     "sass-loader": "^8.0.2",
@@ -26,6 +27,7 @@
     "@splidejs/splide": "^2.4.14",
     "bootstrap": "^4.5.3",
     "glightbox": "^3.0.5",
+    "postcss-clean": "^1.1.0",
     "slideout": "^1.0.1",
     "swiper": "^6.3.3"
   }
