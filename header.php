@@ -44,7 +44,7 @@
 				<p class="site-description"><?php echo $ztgroup_theme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-
+					<i class="fa fa-user"></i>
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ztgroup-theme' ); ?></button>
 			<?php
