@@ -124,10 +124,54 @@ add_action( 'after_setup_theme', 'ztgroup_theme_content_width', 0 );
 function ztgroup_theme_widgets_init() {
 	register_sidebar(
 		array(
+			'name'          => esc_html__( 'Pie 1', 'ztgroup-theme' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pie 2', 'ztgroup-theme' ),
+			'id'            => 'footer-2',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pie 3', 'ztgroup-theme' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pie 4', 'ztgroup-theme' ),
+			'id'            => 'footer-4',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name'          => esc_html__( 'Sidebar', 'ztgroup-theme' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
@@ -135,6 +179,17 @@ function ztgroup_theme_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'ztgroup_theme_widgets_init' );
+/**
+ * load svg
+ *
+ * @return void
+ *
+ */
+function dmc_add_svg_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'dmc_add_svg_mime_types');
 
 /**
  * Enqueue scripts and styles.
@@ -199,3 +254,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+

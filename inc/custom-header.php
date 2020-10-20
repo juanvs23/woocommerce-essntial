@@ -22,7 +22,7 @@ function ztgroup_theme_custom_header_setup() {
 		apply_filters(
 			'ztgroup_theme_custom_header_args',
 			array(
-				'default-image'      => '',
+				'default-image'      => '../assets/img/logo.svg',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
@@ -76,3 +76,7 @@ if ( ! function_exists( 'ztgroup_theme_header_style' ) ) :
 		<?php
 	}
 endif;
+
+/**
+ * custom logo
+ */
