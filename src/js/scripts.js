@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     const cerradorBtn=document.querySelector('#cerradorBtn')
     const mobilMinicart=document.querySelector('ul.navigation-mobil ul.mini-cart-content');
     const openMinicartMobil=document.querySelector('.open-minicart-mobil')
+    const hasChildrenMenus=document.querySelectorAll('.menu-item-has-children')
+    const hasChildrenUl=document.querySelectorAll('.menu-item-has-children ul');
     
     openMinicartMobil.addEventListener('click',()=>{
         if(!mobilMinicart.classList.contains('opened')){
@@ -18,6 +20,17 @@ document.addEventListener('DOMContentLoaded',()=>{
             mobilMinicart.style.display="none"
             mobilMinicart.classList.remove('opened')
         }
+    })
+    hasChildrenMenus.forEach((hasChildrenMenu,i)=>{
+        hasChildrenMenu.addEventListener('mouseleave',()=>{
+            hasChildrenUl[i].style.height="0"
+            hasChildrenUl[i].style.overflowY="hidden"
+        })
+        hasChildrenMenu.addEventListener('mouseenter',()=>{
+            hasChildrenUl[i].style.height="250px"
+            
+        })
+       
     })
 
      openMenu.addEventListener('click',()=>{

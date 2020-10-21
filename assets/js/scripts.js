@@ -6033,6 +6033,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var cerradorBtn = document.querySelector('#cerradorBtn');
   var mobilMinicart = document.querySelector('ul.navigation-mobil ul.mini-cart-content');
   var openMinicartMobil = document.querySelector('.open-minicart-mobil');
+  var hasChildrenMenus = document.querySelectorAll('.menu-item-has-children');
+  var hasChildrenUl = document.querySelectorAll('.menu-item-has-children ul');
   openMinicartMobil.addEventListener('click', function () {
     if (!mobilMinicart.classList.contains('opened')) {
       mobilMinicart.classList.add('opened');
@@ -6041,6 +6043,15 @@ document.addEventListener('DOMContentLoaded', function () {
       mobilMinicart.style.display = "none";
       mobilMinicart.classList.remove('opened');
     }
+  });
+  hasChildrenMenus.forEach(function (hasChildrenMenu, i) {
+    hasChildrenMenu.addEventListener('mouseleave', function () {
+      hasChildrenUl[i].style.height = "0";
+      hasChildrenUl[i].style.overflowY = "hidden";
+    });
+    hasChildrenMenu.addEventListener('mouseenter', function () {
+      hasChildrenUl[i].style.height = "250px";
+    });
   });
   openMenu.addEventListener('click', function () {
     document.getElementById("mySidenav").style.width = "250px";
