@@ -1,0 +1,13 @@
+footer{
+    a#btn-top {
+        position: fixed;
+        bottom: 0px;
+        right: 30px;
+        padding: 12px;
+        background: var(--base-blue-1);
+        color: var(--base-white);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        display: none;
+    }
+}

@@ -5,8 +5,37 @@ body,html{
     overflow-x: hidden;
     overscroll-behavior: smooth;
 }
+:root{
+    --base-black:#000;
+    --base-blue-1:#047aff;
+    --base-blue-2:#24c6ff;
+    --base-blue-3:#9cc9e8;
+    --base-white:#fff;
+    --primary-blue:#3994fc;
+    --primary-pink-1:#ca5888;
+    --primary-pink-2:#f575ad;
+    --secondary-purple-1:#8368e2;
+    --secondary-purple-light:#e9bdef;
+    --secondary-yellow:#ffc600;
+    --secondary-yellow-light:#fffb80;
+
+}
+.btn-default{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    &:active,
+    &:visited,
+    &:focus{
+        outline: none;
+    }
+}
+
 @media (min-width:1400px){
     .container{
         max-width: 1250px;
     }
+}
+.show-action{
+    display: block !important;
 }
