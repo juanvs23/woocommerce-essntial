@@ -502,3 +502,24 @@ ul.navigation-mobil li a {
         background-color: white;
     }
 }
+.socials a,
+    .user-config a,
+    .user-config a:visited,
+    .socials a:visited {
+        font-size: 21px;
+        padding: 1px 10px;
+        color: white;
+        transition: 0.3s 0.1s;
+    }
+    .social.facebook:hover{
+        color:#3b5a9a;
+        transition: 0.3s 0.1s;
+    }
+    .social.instagram:hover{
+        color:#7c4a3a;
+        transition: 0.3s 0.1s;
+    }
+    .social.twitter:hover{
+        color:#1aa9e1;
+        transition: 0.3s 0.1s;
+    }
