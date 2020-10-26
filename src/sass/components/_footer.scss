@@ -34,6 +34,10 @@
         color:var(--base-charcoal);
         color:var(--base-white);
     }
+    footer ul.sub-menu {
+        position: relative !important;
+        height: auto !important;
+    }
     footer a#btn-top {
         position: fixed;
         bottom: 0px;
