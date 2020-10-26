@@ -9,7 +9,16 @@ const searchSection=document.querySelector('#search-section');
     const hasChildrenMenus=document.querySelectorAll('.menu-item-has-children')
     const hasChildrenUl=document.querySelectorAll('.menu-item-has-children ul');
     const closeSearch=document.querySelector('#close-search');
-
+    const collapseTrigger1=document.querySelectorAll('.footer-top .collapse-trigger')
+    const collapseTrigger2=document.querySelectorAll('.footer-center .collapse-trigger')
+    const header=document.querySelector('header #menu-sticky'),
+	  scrollBtn=document.createElement('a'),
+	  footer=document.querySelector('footer'),
+		nodeText=document.createTextNode('');
+       scrollBtn.appendChild(nodeText)
+       scrollBtn.innerHTML='<i class="fas fa-chevron-up"></i>'
+		scrollBtn.setAttribute('href','#')
+	scrollBtn.setAttribute('id','btn-top');
 
 
     const searchOpen=(id)=>{
@@ -36,11 +45,40 @@ const searchSection=document.querySelector('#search-section');
         }
     }
 
+ //functions
+const   collapseAll=(triggers)=>{
+
    
+    triggers.forEach((trigger,i)=>{
+      const parentList=Array.from(trigger.parentNode.children)
+      parentList[1].classList.add('collapse')
+      if (parentList[0].classList.contains('active')) {
+          parentList[1].classList.add('open-footer')
+      }
+     parentList[0].addEventListener('click',(e)=>{
+        
+        if (parentList[0].classList.contains('active')) {
+            parentList[0].classList.remove('active')
+            parentList[1].classList.remove('open-footer')
+        } else {
+            
+            parentList[0].classList.add('active')
+            parentList[1].classList.add('open-footer')
+        }
+     }) 
+    })
+} 
+
+
 document.addEventListener('DOMContentLoaded',()=>{
     
-    
-
+//top to up btn
+footer.appendChild(scrollBtn)    
+//collpase
+if (window.innerWidth < 768) {
+    collapseAll(collapseTrigger1)
+    collapseAll(collapseTrigger2)
+}
 //listener
 openSearchBtn.addEventListener('click',()=>{
     searchOpen(openSearchBtn)
@@ -90,27 +128,12 @@ closeSearch.addEventListener('click',()=>{
 
    
 
-//functions
 
 
 
 });
 
-
-const header=document.querySelector('header #menu-sticky'),
-	  scrollBtn=document.createElement('a'),
-	  footer=document.querySelector('footer'),
-		nodeText=document.createTextNode('');
-       scrollBtn.appendChild(nodeText)
-       scrollBtn.innerHTML='<i class="fas fa-chevron-up"></i>'
-		scrollBtn.setAttribute('href','#')
-	scrollBtn.setAttribute('id','btn-top');
-
-
-document.addEventListener('DOMContentLoaded',()=>{
-	footer.appendChild(scrollBtn)
-
-})
+//sticky action
 window.addEventListener('scroll',(e)=>{
 	let scroll = window.pageYOffset|| document.documentElement.scrollTop;
 	if(scroll>52){
@@ -124,6 +147,10 @@ window.addEventListener('scroll',(e)=>{
 			scrollBtn.classList.remove('show-action')
 	   }
 }) 
+
+
+
+
 
 
 

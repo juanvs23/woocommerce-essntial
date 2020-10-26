@@ -5,6 +5,7 @@ label.form-label {
 }
 header{
     width: 100%;
+    z-index: 1000;
 
 }
 .stycky-action{
@@ -12,6 +13,7 @@ header{
     width: 100%;
     top:0;
     left: 0;
+    z-index: 1000;
     button#close-search{
         top: 4px !important;
     }
@@ -116,6 +118,10 @@ img.custom-logo {
         
     
     }
+    .header-center{
+        background-color: var( --base-blue-1);
+        padding-bottom: 0px;
+    }
     .user-config {
         display: flex;
         justify-content: space-evenly;
@@ -180,6 +186,7 @@ img.custom-logo {
         left: 0;
         bottom: 0;
         background: var( --base-blue-1);
+        z-index: 1001;
         width: 0;
         overflow: hidden;
         padding: 62px 0px;

@@ -122,48 +122,136 @@ add_action( 'after_setup_theme', 'ztgroup_theme_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function ztgroup_theme_widgets_init() {
+	
+	
+	//footer-top
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Pie 1', 'ztgroup-theme' ),
+			'name'          => esc_html__( 'Pie arriba 1', 'ztgroup-theme' ),
+			'id'            => 'footer-top-1',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<div id="top-footer-1" class="widget-footer-top widget-footer %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="top-footer-title collapse-trigger active" data-parent="top-footer-1">',
+			'after_title'   => '</h3>',
+			'class'         =>'widget-target',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pie arriba 2', 'ztgroup-theme' ),
+			'id'            => 'footer-top-2',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<div id="top-footer-2" class="widget-footer-top widget-footer %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="top-footer-title collapse-trigger" data-parent="top-footer-2">',
+			'after_title'   => '</h3>',
+			'class'         =>'widget-target',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pie arriba 3', 'ztgroup-theme' ),
+			'id'            => 'footer-top-3',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<div id="top-footer-3 " class="widget-footer-top widget-footer %2$s">',
+			'after_widget'  => '</div>',
+			'class'=>'widget-target',
+			'before_title'  => '<h3 class="top-footer-title collapse-trigger" data-parent="top-footer-3">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pie arriba 4', 'ztgroup-theme' ),
+			'id'            => 'footer-top-4',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<div id="top-footer-4" class="widget-footer-top widget-footer %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="top-footer-title collapse-trigger" data-parent="top-footer-4">',
+			'after_title'   => '</h3>',
+			'class'=>'widget-target',
+		)
+	);
+
+	register_sidebar(
+		//center footer
+		array(
+			'name'          => esc_html__( 'Pie medio 1', 'ztgroup-theme' ),
 			'id'            => 'footer-1',
 			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div id="footer-center-1 " class="widget-footer-center widget-footer %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="footer-center-title collapse-trigger active" data-parent="footer-center-1">',
+			'after_title'   => '</h3>',
 		)
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Pie 2', 'ztgroup-theme' ),
+			'name'          => esc_html__( 'Pie medio 2', 'ztgroup-theme' ),
 			'id'            => 'footer-2',
 			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div id="footer-center-2" class="widget-footer-center widget-footer  %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="footer-center-title collapse-trigger" data-parent="footer-center-2">',
+			'after_title'   => '</h3>',
 		)
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Pie 3', 'ztgroup-theme' ),
+			'name'          => esc_html__( 'Pie medio 3', 'ztgroup-theme' ),
 			'id'            => 'footer-3',
 			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div id="footer-center-3" class="widget-footer-center widget-footer %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="footer-center-title collapse-trigger" data-parent="footer-center-3">',
+			'after_title'   => '</h3>',
 		)
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Pie 4', 'ztgroup-theme' ),
+			'name'          => esc_html__( 'Pie medio 4', 'ztgroup-theme' ),
 			'id'            => 'footer-4',
 			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div id="footer-center-4" class="widget-footer-center widget-footer %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="footer-center-title collapse-trigger" data-parent="footer-center-2">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	//footer bottom
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pie bajo 1', 'ztgroup-theme' ),
+			'id'            => 'footer-bottom-1',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<div id="footer-bottom-1" class="widget-footer-bottom %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pie bajo 2', 'ztgroup-theme' ),
+			'id'            => 'footer-bottom-2',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<div id="footer-bottom-2" class="widget-footer-bottom %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pie bajo 3', 'ztgroup-theme' ),
+			'id'            => 'footer-bottom-3',
+			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
+			'before_widget' => '<div id="footer-bottom-3" class="widget-footer-bottom %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 	register_sidebar(
@@ -171,10 +259,10 @@ function ztgroup_theme_widgets_init() {
 			'name'          => esc_html__( 'Sidebar', 'ztgroup-theme' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'ztgroup-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div id="%1$s" class="widget-footer %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 }
